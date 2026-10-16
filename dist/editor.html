@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Little Things · 排版画布</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">lt.</span><div><strong>Little Things</strong><span>排版画布</span></div></div>
+    <div class="save-state" id="save-state" role="status">正在载入素材…</div>
+    <div class="top-actions"><button id="import-button">导入布局</button><button id="export-button" class="primary">完成并导出 <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main class="editor-shell">
+    <aside class="layers-panel" aria-label="素材图层">
+      <div class="panel-heading"><h1>素材图层</h1><span class="count">15</span></div>
+      <p class="muted small">越靠上，越在前面</p>
+      <ol id="layers" aria-label="从前到后的图层"></ol>
+      <div class="layer-footer">被挡住的素材，可以在这里选中。</div>
+    </aside>
+    <section class="canvas-panel" aria-label="排版工作区">
+      <div class="canvas-toolbar">
+        <div class="segmented" aria-label="选择画布"><button data-mode="desktop" aria-pressed="true">电脑</button><button data-mode="mobile" aria-pressed="false">手机</button></div>
+        <div class="history"><button id="undo" title="撤销 ⌘/Ctrl Z" aria-label="撤销" disabled>↶</button><button id="redo" title="重做 ⌘/Ctrl Shift Z" aria-label="重做" disabled>↷</button></div>
+        <div class="zoom-controls"><button id="zoom-out" aria-label="缩小画布视图">−</button><button id="fit" title="适合宽度">适合</button><span id="zoom-value">100%</span><button id="zoom-in" aria-label="放大画布视图">+</button></div>
+        <button id="preview" aria-pressed="false">预览排版</button>
+      </div>
+      <div id="workspace" class="workspace" tabindex="0" aria-label="画布：选择素材后拖动；方向键微调；右下角缩放">
+        <div id="canvas-wrap" class="canvas-wrap">
+          <div class="canvas-label"><span id="canvas-name">电脑画布</span><span id="canvas-size">1280 × 1894</span></div>
+          <div id="artboard" class="artboard" aria-label="黑色素材画布">
+            <div id="selection" class="selection" hidden><span id="selection-name"></span><button id="resize-handle" aria-label="拖动以等比例缩放" title="拖动以缩放"></button></div>
+          </div>
+        </div>
+      </div>
+      <footer class="canvas-footer"><span id="canvas-hint">拖动位置 · 右下角缩放 · 方向键微调</span><span>Shift + 方向键：10 px</span></footer>
+    </section>
+    <aside class="inspector" aria-label="素材设置">
+      <section class="property-section">
+        <div class="eyebrow">当前选择</div>
+        <h2 id="selected-name">选一件素材</h2>
+        <p id="empty-hint" class="muted small">点击画布上的素材，或从左侧图层列表选择。</p>
+        <fieldset id="properties" disabled>
+          <legend class="sr-only">位置与大小</legend>
+          <div class="field-pair"><label>X 位置<input id="field-x" type="number" min="-12000" max="12000" step="1" inputmode="decimal"></label><label>Y 位置<input id="field-y" type="number" min="-12000" max="12000" step="1" inputmode="decimal"></label></div>
+          <label class="width-field">素材宽度 <span>px · 等比例</span><input id="field-w" type="number" min="20" max="6000" step="1" inputmode="decimal"></label>
+          <div class="property-label">前后图层</div>
+          <div class="layer-actions"><button data-layer="up">上移一层 ↑</button><button data-layer="down">下移一层 ↓</button><button data-layer="front">放到最前</button><button data-layer="back">放到最后</button></div>
+          <button id="locate" class="text-button">在画布中定位 ↗</button>
+        </fieldset>
+      </section>
+      <section class="property-section canvas-settings">
+        <div class="eyebrow">画布设置</div>
+        <label>画布高度 <span>px</span><input id="canvas-height" type="number" min="300" max="12000" step="1"></label>
+        <p class="muted small">电脑与手机的位置、尺寸分别保存；图层顺序共用。</p>
+      </section>
+      <section class="handoff-note"><span class="note-dot" aria-hidden="true"></span><h3>慢慢排，随时回来。</h3><p>修改自动保存在当前浏览器。排好后点「完成并导出」，把布局文件发给我，就可以按你的排版更新网页。</p><p class="muted">这里先静止排版。正式网页会保留不规则漂浮。</p></section>
+      <button id="reset" class="reset-button">恢复初始排版</button>
+    </aside>
+  </main>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <dialog id="export-dialog" aria-labelledby="export-title">
+    <div class="dialog-heading"><span class="eyebrow">布局交接</span><button id="close-export" aria-label="关闭导出窗口">×</button></div>
+    <h2 id="export-title">排好了，就交给我。</h2>
+    <p>下载布局文件，然后发送到我们的对话。电脑、手机排版和图层都会包含在里面。</p>
+    <button id="download" class="primary wide">下载布局文件 .json ↓</button>
+    <details><summary>也可以复制布局文本</summary><textarea id="export-text" readonly aria-label="可复制的布局 JSON" spellcheck="false"></textarea><button id="copy">复制布局文本</button></details>
+    <p class="muted small">导出只保存排版。你的正式网页会在你确认后更新。</p>
+  </dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">恢复初始排版？</h2><p>电脑、手机和图层都会恢复到这次编辑开始前的默认版本。恢复后仍可点「撤销」找回刚才的排版。</p><div class="dialog-actions"><button id="cancel-reset">继续编辑</button><button id="confirm-reset" class="primary">恢复初始排版</button></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="collection.js"></script>
+  <script type="module" src="editor.js"></script>
+</body>
+</html>

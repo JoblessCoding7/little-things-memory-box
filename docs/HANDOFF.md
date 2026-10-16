@@ -39,6 +39,8 @@ node --check dist/collection.js
 
 ## Hosting
 
+The owner can now arrange assets at `/editor.html`. Read `LAYOUT_EDITOR.md` for the export schema and instructions to apply a returned, confirmed layout. Browser-local drafts do not update the public collection automatically.
+
 The existing Site is identified by `.openai/hosting.json`; retain that project ID and current private access. GitHub pushes are a backup/development workflow and do not automatically trigger this Sites deployment. To publish through Codex Sites, use the Sites skill to open the existing site's source repository, sync the reviewed files into that checkout, package `dist/`, then save/deploy the verified pushed commit. Obtain fresh repository credentials through the connector and keep them out of files and Git history.
 
 For another static host, deploy only `dist/`. Do not publish `sources/`, `review/` or internal documentation as the production web root. A deployment migration or access change is a separate owner decision.

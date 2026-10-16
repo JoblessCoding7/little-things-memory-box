@@ -1,5 +1,7 @@
 # Status — 2026-10-16
 
+The standalone layout editor is published at `/editor.html`, with the same owner-private access. The user can reposition and resize all 15 assets, reorder layers, arrange separate desktop/mobile layouts, save browser-local drafts, and export/import JSON. Exported user-approved layouts will be applied in a later update. The original collection and image files remain unchanged. Browser QA and data-validation results are in `LAYOUT_EDITOR.md`; current deployment metadata is in `DEPLOYMENT.json`.
+
 All 15 approved assets are integrated and published to the existing owner-private Site. Desktop (1440px) and phone (390px) browser checks passed: images load, no horizontal overflow, no visible body copy, landing opens the collection, pendant and mahjong open in the dialog, Escape closes it, home navigation works, and all 45 motion layers pause/resume. JavaScript syntax checks passed; Taste source lint reported 0 failures and 0 warnings. Reduced-motion CSS is preserved; the OS preference was not simulated in this pass.
 
 The external-browser Taste inspector was not run because this environment requires the CUA browser interface. Browser screenshots are in `screenshots/`. These are implementation evidence, not a claim of pixel-identical reproduction of the reference.
