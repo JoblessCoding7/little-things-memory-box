@@ -1,0 +1,152 @@
+[
+  {
+    "id": "01-valorant",
+    "original": "sources/originals/01-valorant.jpg",
+    "approved_output": "dist/assets/01-valorant.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image, not just a style reference. Output: a faithful photo/graphic cutout asset for a black-background floating object website. Retain the exact red VALORANT emblem AND the exact VALORANT wordmark together with their precise original geometry, red color and relative layout. Remove only the black background. Do not reinterpret the typography or make a physical 3D object. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background, no checkerboard baked into image, no white or black rectangle, no floor, no drop shadow or glow. Fit the complete subject in frame with a small clean transparent margin. No additional text.",
+    "review_note": "首版边缘仍有少量碎点，待精修；请先核对图标和文字的形式。",
+    "sha256": "1d23778f3bc1e4c7237f72bfd40483f9a19ebde2531da0946bce5d302e1cca2b"
+  },
+  {
+    "id": "02-track-jacket",
+    "original": "sources/originals/02-track-jacket.png",
+    "approved_output": "dist/assets/02-track-jacket.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image, not just a style reference. Output: a faithful photo/graphic cutout asset for a black-background floating object website. Isolate the exact black Adidas track jacket with white sleeve stripes and small white chest trefoil. Remove white background and browser buttons at upper right. Preserve the identical front view, garment cut, collar, zipper, folds, subtle black textile highlights, stripe count, and logo. Keep black fabric visible and detailed, no artificial glow. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background, no checkerboard baked into image, no white or black rectangle, no floor, no drop shadow or glow. Fit the complete subject in frame with a small clean transparent margin. No additional text.",
+    "review_note": "",
+    "sha256": "6fbb873a764ba8ffc579675d8934b823c6345ddd8a12c62f749433a5e00e821c"
+  },
+  {
+    "id": "03-milk-tea",
+    "original": "sources/originals/03-milk-tea.jpg",
+    "approved_output": "dist/assets/03-milk-tea.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image, not just a style reference. Output: a faithful photo/graphic cutout asset for a black-background floating object website. Isolate this exact clear plastic cup of pale milk tea, black tapioca pearls, clear flat lid, and clear straw. Preserve straw, original cup proportions, tea color, reflections and all pearls. Remove the white background without erasing the pale cup edges or transparent straw. Do not add labels, toppings or extra objects. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background, no checkerboard baked into image, no white or black rectangle, no floor, no drop shadow or glow. Fit the complete subject in frame with a small clean transparent margin. No additional text.",
+    "review_note": "",
+    "sha256": "ec4cfea9eb7e111313b3714ee05cb7d26cbe39889d7ff1636028aafd2a6dc1eb"
+  },
+  {
+    "id": "04-rocket-toy",
+    "original": "sources/originals/04-rocket-toy.png",
+    "approved_output": "dist/assets/04-rocket-toy.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Isolate the same small cream animal toy wearing a lilac rocket costume with red side fins and pink top. Preserve EXACT outfit, facial features, colors, proportions, front pose, and flocked/plush photographed material. Remove white background and any stray edge pixels. Mildly clean source compression only, do not redesign or make a cartoon illustration. Preserve the subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep the complete subject with a small transparent margin. No additional text.",
+    "review_note": "原图分辨率低；这是 AI 修复后的纹理与面部细节候选，请与原图比较。",
+    "sha256": "b5216be80e0b1767402d7c0294aaeba8425fabeee9077c85d1e4e3f83a77e54c"
+  },
+  {
+    "id": "05-chocolate",
+    "original": "sources/originals/05-chocolate.jpg",
+    "approved_output": "dist/assets/05-chocolate.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Keep BOTH Cadbury Dairy Milk bars as a SINGLE grouped cutout in their exact overlapping diagonal arrangement, one exposed chocolate bar and purple wrappers. Preserve ALL readable branding and package text exactly, same purple/gold/white palette, same shape and perspective. Remove only white background. Do not invent typography or alter the arrangement. Preserve the subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep the complete subject with a small transparent margin. No additional text.",
+    "review_note": "包装小字经 AI 重建，不能保证逐字一致；请重点核对。",
+    "sha256": "2776e7c7d0b992c90f714eb041e1ee6e76e4c3246c40de8a744aba14493b867f"
+  },
+  {
+    "id": "06-bape",
+    "original": "sources/originals/06-bape-new.jpg",
+    "approved_output": "dist/assets/06-bape-v3.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Input image is the edit target, a flat two-color BAPE ape-head logo on white. Remove ONLY the white backdrop and the white in the registered trademark circle, output genuine transparent alpha. Preserve the exact silhouette, facial geometry, perfectly flat uniform dark brown and pale gold fills, and black registered trademark symbol at lower right, in their same positions and proportions. Keep the entire brown interior completely solid with no texture, shading, smudges or holes. Retain all colored facial shapes precisely, including eye, nose, ear and mouth. This is an extraction, not a redesigned logo. No added outlines, shadows, glow, border or other text. Clean crisp anti-aliased edges, no white fringe. Entire mark fully inside canvas with small transparent margin.",
+    "review_note": "使用你新提供的高清图重做。AI 候选仍有轻微渐变，与原图纯色色块有差异；右下黑色 ® 可切换灰底查看。",
+    "sha256": "3e3f8e91f5bbef220e0f07ba6fb6acd01fe7fcac51a7058e2e59f7cd5b90fb57"
+  },
+  {
+    "id": "07-volleyball",
+    "original": "sources/originals/07-volleyball.jpg",
+    "approved_output": "dist/assets/07-volleyball.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Isolate the exact yellow, white, and navy volleyball. Preserve same panel geometry, ball orientation, spherical shape, pebbled real surface texture, original light and shadow ON the ball. Remove the white background and any external shadow. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep entire subject in frame with a small transparent margin. No additional text.",
+    "review_note": "",
+    "sha256": "de356f5d11e916e57a65cf0348fb09f5ffb4d16c912092d6dd61184289e70f2b"
+  },
+  {
+    "id": "08-ambush-shoe",
+    "original": "sources/originals/08-ambush-shoe.png",
+    "approved_output": "dist/assets/08-ambush-shoe.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Extract ONLY the central beige AMBUSH Nike sneaker with dark elongated swoosh, viewed from heel/sole at the same diagonal orientation. Remove black background and ALL other objects: orange cereal box at top, black object crossing at left, partial white circular object at right, metallic curved ring at bottom, and small sneaker at bottom left. Keep same sneaker and exact perspective/material/swoosh/AMBUSH lettering. The heel is slightly clipped at the left edge and a small part of sole overlaps another black object: reconstruct ONLY the missing shoe boundary with minimal continuity, do not redesign. Preserve entire visible outsole, stitching, beige suede texture and black swoosh. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep entire subject in frame with a small transparent margin. No additional text.",
+    "review_note": "原图有遮挡，已补全少量边缘；请重点核对鞋型与标志。",
+    "sha256": "3d09d0c384eb149dd7687432ea4c5892b6de7f2f85044a903c85e1b8371eab21"
+  },
+  {
+    "id": "09-cake",
+    "original": "sources/originals/09-cake.jpg",
+    "approved_output": "dist/assets/09-cake.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Extract the exact single slice of golden sponge Swiss roll with white cream spiral and powdered sugar on top. Preserve its original camera angle, irregular crumb edges, realistic porous texture, cream swirl, warm yellow color and natural lighting. Remove only white background, no plate, no decoration, no new shadow. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep entire subject in frame with a small transparent margin. No additional text.",
+    "review_note": "",
+    "sha256": "f4a01fd94a2cf48a1f7290c1723fc5b2b5866af21eeb1fe11372f9a4388efce2"
+  },
+  {
+    "id": "10-mahjong",
+    "original": "sources/originals/10-mahjong.jpg",
+    "approved_output": "dist/assets/10-mahjong.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Isolate the exact one ivory mahjong tile with dark green Chinese character 中, seen at original three-quarter angle. Preserve the precise 中 character, smooth rounded corners, ivory material, beige back layer, original shape and perspective. Remove white background AND the external floor shadow, keep shading on the tile itself. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep entire subject in frame with a small transparent margin. No additional text.",
+    "review_note": "",
+    "sha256": "f1b9de2a611221ad782038a37853ca4ce1fd372bb1480ad1244abe17d2c5b2a6"
+  },
+  {
+    "id": "11-white-sneaker",
+    "original": "sources/originals/11-white-sneaker.png",
+    "approved_output": "dist/assets/11-white-sneaker-v2.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit the supplied original image faithfully. Extract this exact white Nike Air Force 1 sneaker in the original lateral side view, toe pointing right. Preserve all white leather surfaces, stitching, perforations, laces, swoosh, sole tread, embossed AIR lettering and original proportions. Remove only white background, retain the full white shoe edge without grey halos. No recolor, no perspective change. Cutout edge cleanup is essential: a single clean connected silhouette of the white shoe, carefully following the actual sole, leather and lace edge. Remove ALL external white specks, floor remnants, fringes, stray detached pixels, ragged halos and debris, especially beneath the outsole. Preserve pale leather and lace detail INSIDE the silhouette. No artificial shadow. Keep the exact original design, orientation, lettering and proportions. Output actual transparent alpha outside the subject. Entire subject inside frame with comfortable clear transparent margin. No white or black rectangular background, no checkerboard.",
+    "review_note": "已重做边缘清理，仍需核对鞋底、鞋带边缘与原图细节。",
+    "sha256": "1d317261cd95abe06d5ebb21a12a10920c0ac94b6e4c8f630d5ae2e532844374"
+  },
+  {
+    "id": "12-ghost-toy",
+    "original": "sources/originals/12-ghost-toy.png",
+    "approved_output": "dist/assets/12-ghost-toy.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Edit target: the supplied image. Output: faithful cutout asset for a black-background floating object website. Extract this exact little cream animal toy in a white ghost costume, purple satin bow and purple witch hat with orange band. Preserve the real photographed plush/flocked materials, exact face, pose, colors, accessories, outline and proportions. Remove only the white background. Clean slight compression without making a cartoon or changing the toy design. Preserve the source subject faithfully; do not stylize or redraw creatively. Actual transparent alpha background; no checkerboard baked into image, no white or black rectangle, floor, drop shadow, or glow. Keep entire subject in frame with a small transparent margin. No additional text.",
+    "review_note": "原图分辨率低；这是 AI 修复后的纹理与面部细节候选，请与原图比较。",
+    "sha256": "e79e8676221a532c7a3ea11ed5fe5feb5a19678b5ed63ff4383f8b4b220627c6"
+  },
+  {
+    "id": "13-orb-pendant",
+    "original": "sources/originals/13-orb-pendant.jpg",
+    "approved_output": "dist/assets/13-orb-pendant-no-chain.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: precise-object-edit. Input image is the EDIT TARGET: a photorealistic silver and black orb pendant with a silver necklace chain. Remove the ENTIRE necklace chain, including every loose link looping through the top and every link draping down the right. Keep only the standalone orb pendant. Preserve the small fixed integral oval hanging bail at the very top of the cross as part of the pendant, but it must be empty, with no chain threading through it. Reconstruct only the tiny portions of the cross/bail previously obscured by links. Keep the exact same cross shape with black center gem, glossy black sphere, tilted silver orbit ring, gemstone encrusted vertical band, perspective, proportions, polished metal reflections and photographic texture as the input. Do not redesign the jewelry. The silhouette should read as one isolated clean pendant with nothing trailing off to the right. Remove the stray white fringe and pixels outside its contour while preserving silver highlights. Output true transparent alpha around the pendant and through all open spaces. Center the full pendant in the canvas with a comfortable transparent margin on all sides, no cropping. No chain anywhere, no added objects, no floor shadow, no background, no text or watermark.",
+    "review_note": "按你的要求去掉全部链条，保留吊坠本体顶部的小吊环。遮挡处及部分金属反光经 AI 重建；放大看边缘仍有少量白边，待你确认形态。",
+    "sha256": "719c2b5ae48a2e67beb814c34a0045db422dec4941e418df32056dabd4ecc902"
+  },
+  {
+    "id": "14-stussy",
+    "original": "sources/originals/14-stussy.jpg",
+    "approved_output": "dist/assets/14-stussy.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: background-extraction. Input image is the edit target. Remove ONLY the plain white background from the supplied glossy pink Stüssy signature logo, output genuine transparent alpha. Preserve the exact signature shape and its two detached dots, all original pink glossy highlights and grain, and the complete black outline/extruded black edge that belongs to the logo. Remove white negative spaces through and between all letters. The text must remain the same Stüssy handwritten signature, not retyped or redesigned. Keep pink, white highlight strokes on the pink ink and black contour opaque. No new strokes, shadows, texture, embellishments, text or border. Entire original logo fully within the canvas with a small transparent margin. No white halo.",
+    "review_note": "保留黑色轮廓和粉色高光，去掉外部及字间白底。AI 候选比原图更鲜亮，线条细节并非逐像素一致。",
+    "sha256": "1b77a36ba6d0d1156ef50b8d73ae8de8dfcb3f4c1bb0e799b12e3849d5bb9eee"
+  },
+  {
+    "id": "15-miu-miu",
+    "original": "sources/originals/15-miu-miu.jpg",
+    "approved_output": "dist/assets/15-miu-miu.png",
+    "approved": true,
+    "tool": "built-in imagegen",
+    "prompt": "Use case: precise-object-edit plus background-extraction. Input image is a cropped closeup of a dark distressed brown Miu Miu leather tote bag; use it as the exact visual and material anchor. The user explicitly authorizes inferred completion of the cropped portions. Expand to show ONE complete realistic bag, including both full broad leather handle loops, the left and right edges, and the whole soft rounded lower base. Use a coherent, plausible large relaxed leather tote shape matching the source, not a rigid handbag. Preserve as closely as possible the source's front surface folds, rich dark espresso/brown aged leather, bronze rubbed highlights, stitching, broad flat straps, slightly open top, and the small stacked embossed 'miu miu' logo on the front. Keep camera viewpoint nearly front-facing with same slight elevated angle. Do not add hardware, chains, ornaments or new logos. Photorealistic original product-photo treatment, no cartoon/render look. Center the complete bag on genuinely transparent background with generous transparent breathing room around all edges; absolutely no cropping. No floor, cast shadow, frame, caption, background or white fringe. This is a full-object reconstruction candidate, not a new style of bag.",
+    "review_note": "按你同意的方向补全提手、包底和两侧；未拍到的部分为 AI 推测，皮革纹理、压印 Logo 和整体比例有重建。",
+    "sha256": "93c9c6406a98c383c6ce803ebd772b10b690fdb92277f2b22a6cde6e70dd384c"
+  }
+]

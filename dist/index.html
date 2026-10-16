@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000"><title>Little things</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="assets/15-miu-miu.png" as="image">
+</head>
+<body>
+<header class="site-header">
+<a class="home" href="#" aria-label="返回首页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3Z"/></svg></a>
+<button class="menu-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<nav id="menu" hidden aria-label="页面导航">
+<a href="#" aria-label="图片首页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3Z"/></svg></a>
+<a href="#collection" aria-label="漂浮收藏"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h6v6H3zM15 4h6v6h-6zM5 15h6v6H5zM16 15h5v5h-5z"/></svg></a>
+<button id="motion-toggle" aria-label="暂停漂浮动画" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M17 4v16"/></svg></button>
+</nav>
+</header>
+<main>
+<section id="landing" aria-label="图片首页">
+<a class="photograph scene-1" href="#collection" aria-label="进入漂浮收藏"><img class="scene-main" src="assets/15-miu-miu.png" alt="Miu Miu 完整包" decoding="async" fetchpriority="high"><img class="scene-left" src="assets/14-stussy.png" alt="粉色 Stüssy" decoding="async"><img class="scene-right" src="assets/13-orb-pendant-no-chain.png" alt="黑色星球吊坠" decoding="async"></a>
+<a class="photograph scene-2" href="#collection" aria-label="进入漂浮收藏"><img class="scene-main" src="assets/02-track-jacket.png" alt="黑色运动外套" decoding="async" loading="lazy"><img class="scene-left" src="assets/06-bape-v3.png" alt="BAPE 猿人头" decoding="async" loading="lazy"><img class="scene-right" src="assets/11-white-sneaker-v2.png" alt="白色运动鞋" decoding="async" loading="lazy"></a>
+<a class="photograph scene-3" href="#collection" aria-label="进入漂浮收藏"><img class="scene-main" src="assets/12-ghost-toy.png" alt="幽灵玩偶" decoding="async" loading="lazy"><img class="scene-left" src="assets/04-rocket-toy.png" alt="火箭玩偶" decoding="async" loading="lazy"><img class="scene-right" src="assets/03-milk-tea.png" alt="珍珠奶茶" decoding="async" loading="lazy"></a>
+<a class="photograph scene-4" href="#collection" aria-label="进入漂浮收藏"><img class="scene-main" src="assets/09-cake.png" alt="奶油蛋糕卷" decoding="async" loading="lazy"><img class="scene-left" src="assets/05-chocolate.png" alt="紫色巧克力" decoding="async" loading="lazy"><img class="scene-right" src="assets/10-mahjong.png" alt="中字麻将" decoding="async" loading="lazy"></a>
+<a class="photograph scene-5" href="#collection" aria-label="进入漂浮收藏"><img class="scene-main" src="assets/07-volleyball.png" alt="排球" decoding="async" loading="lazy"><img class="scene-left" src="assets/01-valorant.png" alt="VALORANT" decoding="async" loading="lazy"><img class="scene-right" src="assets/08-ambush-shoe.png" alt="AMBUSH 鞋" decoding="async" loading="lazy"></a>
+</section>
+<section id="collection" aria-label="漂浮收藏" hidden><div id="world"></div></section>
+</main>
+<dialog id="lightbox" aria-label="查看物件"><button class="close" aria-label="关闭大图"><span></span><span></span></button><img alt=""></dialog>
+<script src="collection.js"></script><script src="app.js"></script>
+</body></html>

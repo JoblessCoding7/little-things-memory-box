@@ -1,0 +1,111 @@
+{
+  "approvalDate": "2026-10-15",
+  "approvalScope": "All 15 current reviewed candidates approved; replace all previous prototype imagery.",
+  "assets": [
+    {
+      "id": "01-valorant",
+      "name": "VALORANT",
+      "file": "assets/01-valorant.png",
+      "sourceFile": "cfae886e263126f685510e2f45b82970.jpg",
+      "reviewNote": "首版边缘仍有少量碎点，待精修；请先核对图标和文字的形式。"
+    },
+    {
+      "id": "02-track-jacket",
+      "name": "黑色运动外套",
+      "file": "assets/02-track-jacket.png",
+      "sourceFile": "截屏2026-10-15 下午12.11.00.png",
+      "reviewNote": ""
+    },
+    {
+      "id": "03-milk-tea",
+      "name": "珍珠奶茶",
+      "file": "assets/03-milk-tea.png",
+      "sourceFile": "fafd0f9c7daef75d21be2a8aa6ea4afe.jpg",
+      "reviewNote": ""
+    },
+    {
+      "id": "04-rocket-toy",
+      "name": "火箭玩偶",
+      "file": "assets/04-rocket-toy.png",
+      "sourceFile": "截屏2026-10-15 下午12.16.40.png",
+      "reviewNote": "原图分辨率低；这是 AI 修复后的纹理与面部细节候选，请与原图比较。"
+    },
+    {
+      "id": "05-chocolate",
+      "name": "紫色巧克力",
+      "file": "assets/05-chocolate.png",
+      "sourceFile": "b3fca93f858910d93673da47dc288cd4.jpg",
+      "reviewNote": "包装小字经 AI 重建，不能保证逐字一致；请重点核对。"
+    },
+    {
+      "id": "06-bape",
+      "name": "BAPE 猿人头",
+      "file": "assets/06-bape-v3.png",
+      "sourceFile": "e885fbb516b74715063cfe62c52f1945.jpg",
+      "reviewNote": "使用你新提供的高清图重做。AI 候选仍有轻微渐变，与原图纯色色块有差异；右下黑色 ® 可切换灰底查看。"
+    },
+    {
+      "id": "07-volleyball",
+      "name": "排球",
+      "file": "assets/07-volleyball.png",
+      "sourceFile": "ceed3b95b6a35cd2ee300e364f4ab3a0.jpg",
+      "reviewNote": ""
+    },
+    {
+      "id": "08-ambush-shoe",
+      "name": "AMBUSH 鞋",
+      "file": "assets/08-ambush-shoe.png",
+      "sourceFile": "截屏2026-10-15 下午12.05.20.png",
+      "reviewNote": "原图有遮挡，已补全少量边缘；请重点核对鞋型与标志。"
+    },
+    {
+      "id": "09-cake",
+      "name": "奶油蛋糕卷",
+      "file": "assets/09-cake.png",
+      "sourceFile": "c815c916aed8a6ce4932c03ef78ef1dd.jpg",
+      "reviewNote": ""
+    },
+    {
+      "id": "10-mahjong",
+      "name": "中字麻将",
+      "file": "assets/10-mahjong.png",
+      "sourceFile": "6141d744ab8b506f5eb3d00e87b93423.jpg",
+      "reviewNote": ""
+    },
+    {
+      "id": "11-white-sneaker",
+      "name": "白色运动鞋",
+      "file": "assets/11-white-sneaker-v2.png",
+      "sourceFile": "截屏2026-10-15 下午12.08.29.png",
+      "reviewNote": "已重做边缘清理，仍需核对鞋底、鞋带边缘与原图细节。"
+    },
+    {
+      "id": "12-ghost-toy",
+      "name": "幽灵玩偶",
+      "file": "assets/12-ghost-toy.png",
+      "sourceFile": "截屏2026-10-15 下午12.16.06.png",
+      "reviewNote": "原图分辨率低；这是 AI 修复后的纹理与面部细节候选，请与原图比较。"
+    },
+    {
+      "id": "13-orb-pendant",
+      "name": "黑色星球吊坠",
+      "file": "assets/13-orb-pendant-no-chain.png",
+      "sourceFile": "0faacf664e8c383844e618822b948674.jpg",
+      "reviewNote": "按你的要求去掉全部链条，保留吊坠本体顶部的小吊环。遮挡处及部分金属反光经 AI 重建；放大看边缘仍有少量白边，待你确认形态。"
+    },
+    {
+      "id": "14-stussy",
+      "name": "粉色 Stüssy",
+      "file": "assets/14-stussy.png",
+      "sourceFile": "87bea60dfb0729c580a1af3e1c98c7cd.jpg",
+      "reviewNote": "保留黑色轮廓和粉色高光，去掉外部及字间白底。AI 候选比原图更鲜亮，线条细节并非逐像素一致。"
+    },
+    {
+      "id": "15-miu-miu",
+      "name": "Miu Miu 完整包",
+      "file": "assets/15-miu-miu.png",
+      "sourceFile": "eae921bb75a474a44b146feb42da5fdc.jpg",
+      "reviewNote": "按你同意的方向补全提手、包底和两侧；未拍到的部分为 AI 推测，皮革纹理、压印 Logo 和整体比例有重建。"
+    }
+  ]
+}
