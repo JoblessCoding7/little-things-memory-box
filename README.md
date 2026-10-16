@@ -44,6 +44,6 @@ python3 -m http.server 3001 --bind 127.0.0.1
 | `docs/STATUS.md` | 验证记录与发布状态 |
 | `.openai/hosting.json` | 原有 Sites 站点标识与静态目录配置；不含凭证 |
 
-当前网站：<https://little-things-memory-box.snowytide6.chatgpt.site>。访问权限沿用原站点设置，GitHub 仓库为私有。
+已于 2026-10-16 更新上线。当前网站：<https://little-things-memory-box.snowytide6.chatgpt.site>。访问权限沿用原站点设置，GitHub 仓库为私有。
 
 GitHub 是代码与素材存档。推送 GitHub 不会自动发布到 Sites，发布流程见交接说明。仓库仅包含当前确认版本，旧参考素材和未选中的生成版本留在原本地归档。

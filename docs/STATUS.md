@@ -1,10 +1,10 @@
 # Status — 2026-10-16
 
-All 15 approved assets are integrated locally. Desktop (1440px) and phone (390px) browser checks passed: images load, no horizontal overflow, no visible body copy, landing opens the collection, pendant and mahjong open in the dialog, Escape closes it, home navigation works, and all 45 motion layers pause/resume. JavaScript syntax checks passed; Taste source lint reported 0 failures and 0 warnings. Reduced-motion CSS is preserved; the OS preference was not simulated in this pass.
+All 15 approved assets are integrated and published to the existing owner-private Site. Desktop (1440px) and phone (390px) browser checks passed: images load, no horizontal overflow, no visible body copy, landing opens the collection, pendant and mahjong open in the dialog, Escape closes it, home navigation works, and all 45 motion layers pause/resume. JavaScript syntax checks passed; Taste source lint reported 0 failures and 0 warnings. Reduced-motion CSS is preserved; the OS preference was not simulated in this pass.
 
 The external-browser Taste inspector was not run because this environment requires the CUA browser interface. Browser screenshots are in `screenshots/`. These are implementation evidence, not a claim of pixel-identical reproduction of the reference.
 
-Tablet (768px) also passed: all 15 images loaded, no horizontal overflow and no visible body text. Publication and repository upload are pending.
+Tablet (768px) also passed: all 15 images loaded, no horizontal overflow and no visible body text. Publication succeeded on 2026-10-16. The clean source snapshot was pushed to the private GitHub repository `JoblessCoding7/little-things-memory-box`. The publication receipt is in `DEPLOYMENT.json`.
 
 ## Visual review
 
