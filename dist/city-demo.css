@@ -55,7 +55,7 @@ body { font-family: var(--city-display); background: var(--city-sky); }
   text-align: center; text-transform: uppercase; white-space: nowrap;
 }
 .city-kaohsiung .city-title { top: 18.4cqh; font-size: 14cqw; letter-spacing: .025em; }
-.city::after {
+.city-scene::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3;
   background: linear-gradient(180deg, transparent 35%, rgba(8, 21, 28, .03) 56%, rgba(8, 21, 28, .48)); /* taste-skill-ignore: neutral scrim for photographic text contrast. */
 } /* taste-skill-ignore: neutral photographic scrim for legible city names and clocks. */
@@ -89,11 +89,11 @@ body { font-family: var(--city-display); background: var(--city-sky); }
 /* User-requested frosted join: a feathered blur of both photographs. */
 .city-seam {
   position: absolute; z-index: 6; top: 0; bottom: 0; left: 50%;
-  width: clamp(64px, 7vw, 120px); transform: translateX(-50%); pointer-events: none;
-  background: rgb(245 249 251 / .07);
-  backdrop-filter: blur(22px) saturate(.88); /* taste-skill-ignore: frosted photo seam explicitly requested by the user. */
-  -webkit-backdrop-filter: blur(22px) saturate(.88);
-  mask-image: linear-gradient(90deg, transparent, #000 35%, #000 65%, transparent); /* taste-skill-ignore: feathered alpha mask for the requested glass seam. */
+  width: clamp(24px, 2.4vw, 40px); transform: translateX(-50%); pointer-events: none;
+  background: rgb(245 249 251 / .025);
+  backdrop-filter: blur(9px) saturate(.96); /* taste-skill-ignore: frosted photo seam explicitly requested by the user. */
+  -webkit-backdrop-filter: blur(9px) saturate(.96);
+  mask-image: linear-gradient(90deg, transparent, #000 45%, #000 55%, transparent); /* taste-skill-ignore: feathered alpha mask for the requested glass seam. */
   transition: left 1100ms cubic-bezier(.22,.8,.22,1), opacity 550ms ease;
 }
 .city-zone { position: absolute; z-index: 8; top: 0; bottom: 0; width: 50%; padding: 0; border: 0; background: transparent; color: inherit; cursor: default; }
@@ -101,20 +101,42 @@ body { font-family: var(--city-display); background: var(--city-sky); }
 .zone-kaohsiung { right: 0; }
 .city-zone:focus-visible { outline: 2px solid white; outline-offset: -12px; }
 @media (hover: hover) and (pointer: fine) {
-  .city-landing { display: block; }
-  .city { position: absolute; top: 0; width: 50%; transition: width 1100ms cubic-bezier(.22,.8,.22,1), transform 1100ms cubic-bezier(.22,.8,.22,1), opacity 800ms ease; }
-  .city-vancouver { left: 0; }
-  .city-kaohsiung { right: 0; }
-  .city-vancouver .city-title { top: calc(23cqh - 7cqw); }
-  .city-kaohsiung .city-title { top: calc(26cqh - 12cqw); }
-  .city-landing[data-view="vancouver"] .city-vancouver,
-  .city-landing[data-view="kaohsiung"] .city-kaohsiung { width: 100%; }
-  .city-landing[data-view="vancouver"] .city-kaohsiung { transform: translateX(100%); opacity: 0; }
-  .city-landing[data-view="kaohsiung"] .city-vancouver { transform: translateX(-100%); opacity: 0; }
-  .city-landing[data-view="vancouver"] .city-seam { left: 100%; opacity: 0; }
-  .city-landing[data-view="kaohsiung"] .city-seam { left: 0%; opacity: 0; }
+  .city-landing { --return-edge: 44px; display: block; }
+  .city { position: absolute; inset: 0; width: 100%; transform: none; opacity: 1; transition: clip-path 1150ms cubic-bezier(.22,.8,.22,1); }
+  .city-vancouver { clip-path: inset(0 50% 0 0); }
+  .city-kaohsiung { clip-path: inset(0 0 0 50%); }
+  .city .city-scene { inset: 0; width: 100%; height: 100%; animation: none; transition: transform 1150ms cubic-bezier(.22,.8,.22,1), opacity 300ms ease; }
+  .city-vancouver .city-scene { transform: translateX(-25%); }
+  .city-kaohsiung .city-scene { transform: translateX(10%); }
+  .city-title { left: 25%; width: 50%; font-size: 7.15vw; }
+  .city-vancouver .city-title { top: calc(23cqh - .8vw); }
+  .city-kaohsiung .city-title { top: calc(23cqh - .8vw); left: 40%; font-size: 7vw; transition: transform 1150ms cubic-bezier(.22,.8,.22,1), opacity 300ms ease; }
+  .city-kaohsiung .city-caption { left: 15%; transition: transform 1150ms cubic-bezier(.22,.8,.22,1), opacity 300ms ease; }
+  .city-landing[data-view="kaohsiung"] .city-kaohsiung .city-title { transform: translateX(-30%); }
+  .city-landing[data-view="kaohsiung"] .city-kaohsiung .city-caption { transform: translateX(-15%); }
+  .city-caption { animation: none; }
+  .city-title, .city-caption { transition: transform 1150ms cubic-bezier(.22,.8,.22,1), opacity 300ms ease; }
+  .city-landing[data-view="vancouver"] .city-kaohsiung .city-title,
+  .city-landing[data-view="vancouver"] .city-kaohsiung .city-caption,
+  .city-landing[data-view="kaohsiung"] .city-vancouver .city-title,
+  .city-landing[data-view="kaohsiung"] .city-vancouver .city-caption { opacity: 0; }
+  .city-landing[data-view="vancouver"] .city-vancouver { clip-path: inset(0 var(--return-edge) 0 0); }
+  .city-landing[data-view="vancouver"] .city-kaohsiung { clip-path: inset(0 0 0 calc(100% - var(--return-edge))); }
+  .city-landing[data-view="vancouver"] .city-vancouver .city-scene { transform: translateX(0); }
+  .city-landing[data-view="vancouver"] .city-kaohsiung .city-scene { transform: translateX(50%); }
+  .city-landing[data-view="kaohsiung"] .city-kaohsiung { clip-path: inset(0 0 0 var(--return-edge)); }
+  .city-landing[data-view="kaohsiung"] .city-vancouver { clip-path: inset(0 calc(100% - var(--return-edge)) 0 0); }
+  .city-landing[data-view="kaohsiung"] .city-kaohsiung .city-scene { transform: translateX(0); }
+  .city-landing[data-view="kaohsiung"] .city-vancouver .city-scene { transform: translateX(-50%); }
+  .city-landing[data-view="vancouver"] .city-seam { left: calc(100% - var(--return-edge)); }
+  .city-landing[data-view="kaohsiung"] .city-seam { left: var(--return-edge); }
+  .city-landing[data-view="vancouver"] .zone-vancouver,
+  .city-landing[data-view="kaohsiung"] .zone-kaohsiung { width: calc(100% - var(--return-edge)); }
+  .city-landing[data-view="vancouver"] .zone-kaohsiung,
+  .city-landing[data-view="kaohsiung"] .zone-vancouver { width: var(--return-edge); cursor: w-resize; }
+  .city-landing[data-view="kaohsiung"] .zone-vancouver { cursor: e-resize; }
   .city-landing:not([data-view="split"]) .time-distance { opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .city, .city-seam, .time-distance { transition: none !important; }
+  .city, .city-scene, .city-seam, .time-distance { transition: none !important; }
 }

@@ -54,3 +54,12 @@ Source lint passes with only the expected clock zero-padding warning. 1440x900 d
 The demo is now a standalone landing page. Collection markup, navigation and scripts are removed from this route only. Hovering the left or right half expands that city to the full browser viewport in 1.1 seconds; fixed hit areas prevent moving-edge hover loops. A 48px central neutral zone, pointer exit, or Escape restores the split. The central join uses a feathered backdrop blur, explicitly requested by the user. It travels outward and fades as a city opens. Live clocks, Chinese labels, depth masks and slow photographic motion remain. Keyboard focus/activation supports each city; reduced motion removes transitions. No mobile work in this revision.
 
 Desktop browser checks: both views reach the complete viewport width, the route/hash remains unchanged, no collection is mounted, and there is no horizontal overflow. Source lint has zero failures; glass and clock-padding warnings are intentional. Visual review: design 8, usability 8, creativity 7, content 9 (7.9).
+
+
+## Horizontal slide and return-edge revision
+
+Desktop landscapes now have fixed viewport-sized canvases and constant photo geometry. Only X translations and clipping change between split and expanded states; there is no zoom, vertical drift or image resize. Expanded scenes retain a 44px sliver of the other city. Hovering this sliver returns to the 50/50 composition; a pointer latch prevents immediately reopening while the cursor remains on that edge. The center is no longer a return trigger while expanded. The glass join is 24–40px wide, blur 9px, white opacity 0.025, with a feathered mask. Captions are inside the moving scene, above its contrast scrim.
+
+Image assets: new AI-restored JPEGs are used by this demo, originals retained. Vancouver is 1143×1376 and Kaohsiung 1532×1027. These are clarity-enhanced approximations of the user's photos, with reconstructed small details; not documentary-resolution recovery or 4K. Processing used the built-in imagegen tool, followed only by JPEG encoding at quality 94. Prompts and output paths are in IMAGE_ENHANCEMENT.md.
+
+Desktop verification at 1280×720: both photo widths/heights remain identical in split and expanded views; transform matrices retain scale 1 and Y translation 0. Both 44px return edges restore and hold a 50/50 split. All four image layers load, the small captions remain above the contrast layer, and the inactive city text is hidden in its retained landscape sliver.
