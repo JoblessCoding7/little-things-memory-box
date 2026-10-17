@@ -1,4 +1,9 @@
-<!doctype html><html lang="zh-CN"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="zh-CN"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.enter-cities{position:fixed;inset:0;z-index:2;cursor:pointer}
+.enter-cities:focus-visible{outline:1px solid var(--type);outline-offset:-16px}
+body::after{content:"";position:fixed;inset:0;z-index:3;background:#000;opacity:0;pointer-events:none;transition:opacity 500ms ease}
+body.leaving::after{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){body::after{transition:none}}
+</style></head><body>
 <title>有些碎片</title>
 <link rel="preload" href="assets/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -53,6 +58,11 @@ body{overflow:hidden;display:grid;place-items:center;
 .en.r{left:calc(721 * var(--u))}
 
 @media (prefers-reduced-motion:reduce){.frame{animation:none}}
+.enter-cities{position:fixed;inset:0;z-index:2;cursor:pointer}
+.enter-cities:focus-visible{outline:1px solid var(--type);outline-offset:-16px}
+body::after{content:"";position:fixed;inset:0;z-index:3;background:#000;opacity:0;pointer-events:none;transition:opacity 500ms ease}
+body.leaving::after{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){body::after{transition:none}}
 </style>
 
 <main class="frame" aria-label="有些碎片 · You on my mind">
@@ -64,4 +74,23 @@ body{overflow:hidden;display:grid;place-items:center;
   <span class="en r" aria-hidden="true"><b>M</b>Y <b>M</b>IND</span>
 </main>
 
+<a class="enter-cities" href="city-demo.html" aria-label="进入温哥华与高雄"></a>
+<script>
+(() => {
+  const entry = document.querySelector('.enter-cities');
+  let leaving = false;
+  entry.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (leaving) return;
+    leaving = true;
+    document.body.classList.add('leaving');
+    setTimeout(() => location.assign(entry.href), matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500);
+  });
+  window.addEventListener('pageshow', () => {
+    leaving = false;
+    document.body.classList.remove('leaving');
+  });
+})();
+</script>
 </body></html>

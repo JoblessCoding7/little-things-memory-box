@@ -3,8 +3,5 @@
   "framework": null,
   "buildCommand": "node scripts/build-landing.mjs",
   "outputDirectory": "public",
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/city-demo", "destination": "/index.html" }
-  ]
+  "cleanUrls": true
 }
