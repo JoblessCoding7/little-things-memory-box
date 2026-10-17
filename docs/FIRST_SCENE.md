@@ -9,3 +9,5 @@ From the dual-city landing page, clicking either city fades through black for 65
 Verification: both city links enter the card; browser Back clears the overlay; both original font families load; the 16:9 frame fits 1280x720 with no horizontal overflow. Source lint has zero failures; the existing requested glass seam and clock-padding warnings remain. Desktop scope only.
 
 The build script includes this new page and its local font/license in `public/`. A ready-to-upload ZIP is stored in the current task's artifact directory as `yichen0606-first-scene.zip`.
+
+Published successfully to https://yichen0606.vercel.app/fragments using the verified existing project and official CLI. The public homepage, canonical scene route, font and script all return HTTP 200. The `.html` scene link is normalized by Vercel to `/fragments`. Deployment: dpl_3LBGyiZVBmmj3ZAtwSFvEdQaHhEa.

@@ -3,10 +3,14 @@
   "project_name": "yichen0606",
   "team_slug": "joblesscoding7s-projects",
   "url": "https://yichen0606.vercel.app/",
-  "deployment_url": "https://yichen0606-kuwnpnky0-joblesscoding7s-projects.vercel.app/",
+  "deployment_url": "https://yichen0606-4ucm9hi3w-joblesscoding7s-projects.vercel.app/",
   "dashboard_url": "https://vercel.com/joblesscoding7s-projects/yichen0606",
-  "deployment_method": "Drop to Deploy: generated public folder",
-  "source_commit": "6444ba5",
+  "deployment_method": "Vercel CLI 64.5.0, linked existing project, production deployment",
+  "source_commit": "bd59398",
   "git_auto_deploy_connected": false,
-  "published_date": "2026-10-17"
+  "published_date": "2026-10-17",
+  "project_id": "prj_ZFTqmGhFF7lD7CzrWtRj1OitNKt8",
+  "team_id": "team_bj6CH121A0AZ5l3EFt8ZJ9lw",
+  "deployment_id": "dpl_3LBGyiZVBmmj3ZAtwSFvEdQaHhEa",
+  "first_scene_url": "https://yichen0606.vercel.app/fragments"
 }
