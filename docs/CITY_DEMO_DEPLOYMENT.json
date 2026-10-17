@@ -1,8 +1,8 @@
 {
-  "id": "appgdep_6ad3bf1e5fb88191a1eb6e505e2e6016",
+  "id": "appgdep_6ad3c4349f048191ad3ab602710aed39",
   "project_id": "appgprj_6ad11c460cf88191aab11eb90ef6c02c",
   "title": "小事收藏室",
-  "version_id": "appgprj_6ad11c460cf88191aab11eb90ef6c02c~appgver_9537312c1aa88191bf4df8777245551f",
+  "version_id": "appgprj_6ad11c460cf88191aab11eb90ef6c02c~appgver_dd478a8a703881918aff273284848023",
   "type": "publish",
   "status": "succeeded",
   "url": "https://little-things-memory-box.snowytide6.chatgpt.site",
@@ -11,8 +11,6 @@
   "provider_deployment_id": "site---6ad11c460cf88191aab11eb90ef6c02c",
   "failure_message": null,
   "env_set_revision": 0,
-  "updated_at": "2026-10-17T18:32:06.393600+00:00",
-  "sites_source_commit": "a62d66bc8f6aa7d8af37c2ff48462e9cddfce0a2",
-  "demo_url": "https://little-things-memory-box.snowytide6.chatgpt.site/city-demo.html",
-  "audience": "owner-private (unchanged)"
+  "updated_at": "2026-10-17T18:53:47.937370+00:00",
+  "source_commit": "f843504f5622704ee9d00c0d7cb367ebc2153876"
 }

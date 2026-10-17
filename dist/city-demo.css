@@ -1,17 +1,97 @@
-:root{--city-ink:#fff;--curtain-time:1450ms;--curtain-ease:cubic-bezier(.76,0,.24,1)}
-body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}body:not(.in-collection){overflow:hidden}.site-header{visibility:hidden}.in-collection .site-header{visibility:visible}
-.city-landing{position:fixed;inset:0;z-index:110;display:grid;grid-template-columns:1fr 1fr;height:100svh;background:transparent;isolation:isolate;pointer-events:none}
-.city{position:relative;display:block;overflow:hidden;height:100%;color:var(--city-ink);text-decoration:none;pointer-events:auto;transform:translateX(0);transition:transform var(--curtain-time) var(--curtain-ease);background:#111}
-.city img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform;user-select:none;-webkit-user-drag:none;filter:saturate(.84);animation:city-breathe-left 31s ease-in-out infinite alternate}
-.city-vancouver img{object-position:51% 50%}.city-kaohsiung img{object-position:92% 50%;animation:city-breathe-right 37s ease-in-out -9s infinite alternate}
-.city::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.33),rgba(0,0,0,.02) 29%,rgba(0,0,0,.04) 60%,rgba(0,0,0,.53));transition:opacity .8s} /* taste-skill-ignore: neutral scrim over a photograph, explicitly allowed for text legibility. */
-.city h1,.city h2{position:absolute;z-index:1;top:34px;left:38px;margin:0;font-size:clamp(24px,2.4vw,36px);font-weight:300;letter-spacing:-.035em;line-height:1.1;animation:city-type-in 1.5s ease-out both}
-.city time{position:absolute;z-index:1;left:36px;bottom:35px;font-size:clamp(40px,4.7vw,74px);font-weight:200;font-variant-numeric:tabular-nums;letter-spacing:-.045em;line-height:1.1;animation:city-type-in 1.9s ease-out both}
-.city-kaohsiung h2{left:auto;right:38px;text-align:right}.city-kaohsiung time{left:auto;right:36px;text-align:right}
-.time-distance{position:absolute;z-index:2;bottom:44px;left:50%;transform:translateX(-50%);margin:0;color:var(--city-ink);font-size:16px;font-weight:300;white-space:nowrap;pointer-events:none;transition:opacity .35s}
-.city:focus-visible{outline:3px solid white;outline-offset:-8px}.city:hover::after{opacity:.85}.opening .city-vancouver{transform:translateX(-101%)}.opening .city-kaohsiung{transform:translateX(101%)}.opening .time-distance{opacity:0}.opening .city{pointer-events:none}.opening #world{animation:none}.opening #collection{position:fixed;inset:0;overflow:hidden}.city-landing[hidden]{display:none!important}
-@keyframes city-breathe-left{from{transform:scale(1.015) translate3d(.3%,0,0)}to{transform:scale(1.065) translate3d(-.5%,-.4%,0)}}
-@keyframes city-breathe-right{from{transform:scale(1.02) translate3d(-.4%,.2%,0)}to{transform:scale(1.075) translate3d(.3%,-.3%,0)}}
-@keyframes city-type-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){.city-landing{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.city-vancouver img{object-position:50% 37%}.city-kaohsiung img{object-position:82% 57%}.city h1,.city h2{top:20px;left:22px;right:auto;font-size:24px;text-align:left}.city time,.city-kaohsiung time{left:auto;right:22px;bottom:22px;font-size:40px}.time-distance{top:calc(50% - 28px);bottom:auto;left:22px;transform:translateY(-50%);font-size:14px}.city::after{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.02) 36%,rgba(0,0,0,.4))}} /* taste-skill-ignore: neutral scrim over a photograph, explicitly allowed for text legibility. */
-@media(prefers-reduced-motion:reduce){.city,.city img,.city h1,.city h2,.city time{animation:none!important;transition:none!important}.time-distance{transition:none}}
+:root {
+  --city-ink: #fff;
+  --city-sky: #8aa6b5;
+  --city-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --curtain-time: 1450ms;
+  --curtain-ease: cubic-bezier(.76, 0, .24, 1);
+}
+body { font-family: var(--city-display); }
+body:not(.in-collection) { overflow: hidden; }
+.site-header { visibility: hidden; }
+.in-collection .site-header { visibility: visible; }
+.city-landing {
+  position: fixed; inset: 0; z-index: 110; display: grid;
+  grid-template-columns: 1fr 1fr; height: 100svh;
+  isolation: isolate; pointer-events: none;
+}
+.city {
+  position: relative; display: block; overflow: hidden; height: 100%;
+  container-type: size; color: var(--city-ink); text-decoration: none;
+  pointer-events: auto; transform: translateX(0);
+  transition: transform var(--curtain-time) var(--curtain-ease);
+  background: var(--city-sky);
+}
+.city-scene {
+  position: absolute; inset: -1%; isolation: isolate;
+  animation: city-breathe-left 31s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.city-kaohsiung .city-scene { animation: city-breathe-right 37s ease-in-out -9s infinite alternate; }
+.landscape { position: absolute; width: var(--photo-width); height: var(--photo-height); left: var(--photo-left); top: var(--photo-top); }
+.landscape img { display: block; width: 100%; height: 100%; user-select: none; -webkit-user-drag: none; }
+.landscape-back { z-index: 0; }
+.landscape-front { z-index: 2; clip-path: var(--ridge); pointer-events: none; }
+.city-vancouver {
+  --photo-width: max(102cqw, 64.8cqh);
+  --photo-height: max(122.78cqw, 78cqh);
+  --photo-left: calc((100% - var(--photo-width)) / 2);
+  --photo-top: 23cqh;
+  --ridge: polygon(0% 3.3%, 2% 3.2%, 4% 3.1%, 6% 3.1%, 8% 3.2%, 10.7% 3.3%, 11.9% 3.9%, 13.2% 4.1%, 15.3% 4.8%, 17% 4.9%, 18.8% 4.3%, 20.5% 3.9%, 22.1% 3.2%, 24.3% 2.5%, 26.1% 2.25%, 28.5% 2.05%, 30.3% 2.25%, 32% 2.3%, 34% 2.8%, 36% 2.9%, 38% 3.2%, 40% 3.6%, 42% 2.65%, 43.3% 3.3%, 45% 3.3%, 46.5% 3.7%, 48.3% 3.2%, 50% 4%, 52% 4.3%, 54% 4.4%, 57.5% 4.2%, 60% 4.45%, 62% 4.8%, 65% 6%, 67% 6.9%, 69% 6.8%, 71.5% 5.7%, 73.5% 5.5%, 75.3% 4.8%, 77% 3.8%, 79% 3.1%, 81% 2.6%, 83.3% 2.4%, 84.6% 1.7%, 85.7% 2.4%, 87% 2.2%, 89% 1.6%, 91% 2.1%, 93% 2.3%, 95% 1.9%, 97% 2%, 100% 1.6%, 100% 100%, 0% 100%);
+}
+.city-vancouver .landscape img { filter: saturate(.72) brightness(.93); }
+/* Blend only the existing pale sky into its extended photographic surround. */
+.city-vancouver .landscape-back { mask-image: linear-gradient(to bottom, transparent, #000 5%); } /* taste-skill-ignore: alpha mask for the supplied photo, not a decorative gradient. */
+.city-kaohsiung {
+  --photo-width: max(102cqw, 164.18cqh);
+  --photo-height: max(68.34cqw, 110cqh);
+  --photo-left: calc((100% - var(--photo-width)) * .9);
+  --photo-top: -10cqh;
+  --ridge: polygon(0% 42.2%, 3% 41.7%, 6% 43%, 9% 44%, 13% 43%, 15% 40%, 17% 40%, 19% 38%, 21% 37.5%, 23% 35%, 25% 34.3%, 26% 33.2%, 29% 32.9%, 30% 33.7%, 31% 33.2%, 33% 33.5%, 35% 33.8%, 37% 34.8%, 40% 34.7%, 42% 34%, 44% 34.3%, 46% 36%, 48% 38.5%, 50% 39.5%, 54% 39.7%, 58% 38.5%, 61% 38%, 64% 37%, 66% 37.1%, 69% 36.4%, 71% 35.3%, 73% 35.8%, 76% 38%, 79.35% 38.3%, 79.35% 22.2%, 80.6% 22.8%, 80.6% 21.6%, 81.2% 21.6%, 82.3% 19.1%, 82.4% 15.1%, 82.6% 15.1%, 82.7% 18.9%, 84% 21.7%, 84.7% 21.7%, 84.7% 22.6%, 85.85% 22.2%, 85.85% 34.7%, 87% 34.5%, 87% 36.4%, 87.9% 36.4%, 87.9% 39%, 90% 41.8%, 94% 43.7%, 98% 44.2%, 100% 43.6%, 100% 100%, 0% 100%);
+}
+.city-kaohsiung .landscape img { filter: saturate(.53) brightness(.91); }
+.city-title {
+  position: absolute; z-index: 1; top: 18.4cqh; left: 0; width: 100%;
+  margin: 0; font-family: var(--city-display); font-size: 14.3cqw;
+  font-weight: 100; line-height: 1; letter-spacing: .07em;
+  text-align: center; text-transform: uppercase; white-space: nowrap;
+}
+.city-kaohsiung .city-title { top: 18.4cqh; font-size: 14cqw; letter-spacing: .025em; }
+.city::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3;
+  background: linear-gradient(180deg, transparent 35%, rgba(8, 21, 28, .03) 56%, rgba(8, 21, 28, .48)); /* taste-skill-ignore: neutral scrim for photographic text contrast. */
+} /* taste-skill-ignore: neutral photographic scrim for legible city names and clocks. */
+.city-caption {
+  position: absolute; z-index: 4; bottom: 12.5%; left: 0; width: 100%;
+  display: flex; align-items: center; flex-direction: column; gap: 17px;
+  animation: city-type-in 1.4s ease-out both;
+}
+.city-name { margin: 0; font-size: clamp(21px, 2.1vw, 31px); font-weight: 300; letter-spacing: .13em; text-indent: .13em; line-height: 1.2; }
+.city time { font-size: 16px; font-weight: 300; font-variant-numeric: tabular-nums; letter-spacing: .055em; line-height: 1.3; }
+.time-distance { position: absolute; z-index: 5; bottom: 29px; left: 50%; transform: translateX(-50%); margin: 0; color: var(--city-ink); font-size: 13px; font-weight: 300; white-space: nowrap; pointer-events: none; transition: opacity .35s; }
+.city:focus-visible { outline: 3px solid white; outline-offset: -8px; }
+.city:hover .city-caption { opacity: .85; }
+.opening .city-vancouver { transform: translateX(-101%); }
+.opening .city-kaohsiung { transform: translateX(101%); }
+.opening .time-distance { opacity: 0; }
+.opening .city { pointer-events: none; }
+.opening #world { animation: none; }
+.opening #collection { position: fixed; inset: 0; overflow: hidden; }
+.city-landing[hidden] { display: none !important; }
+@keyframes city-breathe-left { from { transform: scale(1.015) translate3d(.3%, 0, 0); } to { transform: scale(1.04) translate3d(-.3%, -.3%, 0); } }
+@keyframes city-breathe-right { from { transform: scale(1.015) translate3d(-.2%, .1%, 0); } to { transform: scale(1.045) translate3d(.2%, -.3%, 0); } }
+@keyframes city-type-in { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) and (orientation: portrait) {
+  .city-landing { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .city-vancouver { --photo-top: 25cqh; }
+  .city-title { top: calc(25cqh - 7cqw); }
+  .city-kaohsiung { --photo-left: calc((100% - var(--photo-width)) * .98); }
+  .city-kaohsiung .city-title { top: calc(29cqh - 12cqw); }
+  .city-caption { bottom: 10%; gap: 11px; }
+  .city-name { font-size: 22px; }
+  .city time { font-size: 14px; }
+  .time-distance { bottom: 9px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .city, .city-scene, .city-caption { animation: none !important; transition: none !important; }
+  .time-distance { transition: none; }
+}
