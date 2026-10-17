@@ -59,3 +59,7 @@ python3 -m http.server 3001 --bind 127.0.0.1
 已于 2026-10-16 更新上线。当前网站：<https://little-things-memory-box.snowytide6.chatgpt.site>。访问权限沿用原站点设置，GitHub 仓库为私有。
 
 GitHub 是代码与素材存档。推送 GitHub 不会自动发布到 Sites，发布流程见交接说明。仓库仅包含当前确认版本，旧参考素材和未选中的生成版本留在原本地归档。
+
+## 双城开场 Demo
+
+[温哥华与高雄 Demo](https://little-things-memory-box.snowytide6.chatgpt.site/city-demo.html)：两张用户照片、当地时钟、时差和点击展开进入收藏。详见 `docs/CITY_DEMO.md`。原首页与排版编辑器保持独立。
