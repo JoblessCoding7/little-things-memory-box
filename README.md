@@ -66,4 +66,4 @@ GitHub 是代码与素材存档。推送 GitHub 不会自动发布到 Sites，�
 
 ## Vercel 上线配置
 
-当前双城 landing page 可作为 Vercel 首页部署。执行 `node scripts/build-landing.mjs` 生成 `public/`；仓库的 `vercel.json` 已配置构建与输出目录。拟使用项目名 `yichen0606`，实际域名与发布结果以 Vercel 为准。见 [Vercel 部署说明](docs/VERCEL.md)。
+已上线：<https://yichen0606.vercel.app/>。当前为双城 landing page，使用 Vercel Hobby 免费项目，通过上传 `public/` 发布。执行 `node scripts/build-landing.mjs` 可重新生成上线文件。GitHub 目前用于源码备份，尚未连接 Vercel 自动发布；更新流程见 [Vercel 部署说明](docs/VERCEL.md)。

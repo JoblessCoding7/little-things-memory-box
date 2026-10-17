@@ -1,0 +1,12 @@
+{
+  "provider": "vercel",
+  "project_name": "yichen0606",
+  "team_slug": "joblesscoding7s-projects",
+  "url": "https://yichen0606.vercel.app/",
+  "deployment_url": "https://yichen0606-kuwnpnky0-joblesscoding7s-projects.vercel.app/",
+  "dashboard_url": "https://vercel.com/joblesscoding7s-projects/yichen0606",
+  "deployment_method": "Drop to Deploy: generated public folder",
+  "source_commit": "6444ba5",
+  "git_auto_deploy_connected": false,
+  "published_date": "2026-10-17"
+}
