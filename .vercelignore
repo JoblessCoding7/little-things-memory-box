@@ -1,0 +1,7 @@
+sources/
+review/
+docs/
+.openai/
+.taste-skill/
+*.tar.gz
+*.zip

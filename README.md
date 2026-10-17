@@ -63,3 +63,7 @@ GitHub 是代码与素材存档。推送 GitHub 不会自动发布到 Sites，�
 ## 双城开场 Demo
 
 [温哥华与高雄 Demo](https://little-things-memory-box.snowytide6.chatgpt.site/city-demo.html)：两张用户照片、当地时钟、时差和点击展开进入收藏。详见 `docs/CITY_DEMO.md`。原首页与排版编辑器保持独立。
+
+## Vercel 上线配置
+
+当前双城 landing page 可作为 Vercel 首页部署。执行 `node scripts/build-landing.mjs` 生成 `public/`；仓库的 `vercel.json` 已配置构建与输出目录。拟使用项目名 `yichen0606`，实际域名与发布结果以 Vercel 为准。见 [Vercel 部署说明](docs/VERCEL.md)。
