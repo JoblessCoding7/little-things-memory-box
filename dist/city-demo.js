@@ -65,7 +65,6 @@
       if (view !== 'split' && zone.dataset.city !== view) { edgeHold = true; show('split'); return; }
       activate(zone);
     });
-    zone.addEventListener('focus', () => { if (zone.matches(':focus-visible')) activate(zone); });
   });
   hero.addEventListener('focusout', event => { if (!hero.contains(event.relatedTarget)) show('split'); });
   window.addEventListener('keydown', event => { if (event.key === 'Escape') { edgeHold = false; show('split'); document.activeElement?.blur(); } });
