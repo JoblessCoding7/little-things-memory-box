@@ -47,3 +47,10 @@ Top three problems (most visible first), each with the screenshot it shows in an
 3. Initial clocks were dominant: changed to quiet 16px / 14px clocks underneath the Chinese names, matching the requested hierarchy.
 
 Source lint passes with only the expected clock zero-padding warning. 1440x900 desktop, 768x1024 tablet and 390x844 phone renders inspected via CUA. All photo layers loaded, clocks agree on minutes/seconds with a 15-hour difference, and no horizontal overflow was observed. Actual Helvetica Neue 100 use was read from computed browser styles. Browser-driven inspector replaced by equivalent CUA checks to follow environment rules. User photo bytes and collection/editor implementation remain unchanged.
+
+
+## Desktop hover revision
+
+The demo is now a standalone landing page. Collection markup, navigation and scripts are removed from this route only. Hovering the left or right half expands that city to the full browser viewport in 1.1 seconds; fixed hit areas prevent moving-edge hover loops. A 48px central neutral zone, pointer exit, or Escape restores the split. The central join uses a feathered backdrop blur, explicitly requested by the user. It travels outward and fades as a city opens. Live clocks, Chinese labels, depth masks and slow photographic motion remain. Keyboard focus/activation supports each city; reduced motion removes transitions. No mobile work in this revision.
+
+Desktop browser checks: both views reach the complete viewport width, the route/hash remains unchanged, no collection is mounted, and there is no horizontal overflow. Source lint has zero failures; glass and clock-padding warnings are intentional. Visual review: design 8, usability 8, creativity 7, content 9 (7.9).
